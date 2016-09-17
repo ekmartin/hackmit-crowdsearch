@@ -1,0 +1,33 @@
+{
+  "name": "hackmit-crowdsearch",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "kyt dev",
+    "build": "kyt build",
+    "start": "kyt start",
+    "lint": "kyt lint",
+    "lint-style": "kyt lint-style",
+    "proto": "kyt proto",
+    "kyt:help": "kyt --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekmartin/hackmit-crowdsearch.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ekmartin/hackmit-crowdsearch/issues"
+  },
+  "homepage": "https://github.com/ekmartin/hackmit-crowdsearch#readme",
+  "dependencies": {
+    "enzyme": "^2.4.1",
+    "express": "^4.14.0",
+    "kyt": "^0.1.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
+  }
+}
