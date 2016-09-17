@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/ekmartin/hackmit-crowdsearch#readme",
   "dependencies": {
+    "bulma": "^0.1.2",
     "enzyme": "^2.4.1",
     "express": "^4.14.0",
     "kyt": "^0.1.0",
