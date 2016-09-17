@@ -17,15 +17,8 @@ module.exports = {
     loaders: [
       { include: /\.json$/, loaders: ['json-loader'] },
       { test: /\.jsx?$/, loaders: ['babel'], exclude: /node_modules/ },
-      { test: /\.css$/, loader: 'style!css?modules&&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss' },
+      { test: /\.scss$/, loader: 'style!css!sass' },
       { test: /\.png$/, loader: 'url-loader?mimetype=image/png' }
     ]
-  },
-  postcss: function(webpack) {
-    return [
-      require('postcss-import')({ addDependencyTo: webpack }),
-      require('postcss-cssnext'),
-      require('postcss-nested')
-    ];
   }
 };

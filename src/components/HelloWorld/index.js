@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './HelloWorld.css';
+import './HelloWorld.scss';
 
 const HelloWorld = () => (
-  <div className={styles.hello}>
+  <h1 className="title">
     Hello World!
-  </div>
+  </h1>
 );
 
 export default HelloWorld;
