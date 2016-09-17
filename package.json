@@ -4,14 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "kyt dev",
-    "build": "kyt build",
-    "start": "kyt start",
-    "lint": "kyt lint",
-    "lint-style": "kyt lint-style",
-    "proto": "kyt proto",
-    "kyt:help": "kyt --help"
+    "start": "node webpack/server",
+    "build": "webpack --config webpack/prod.config.js",
+    "lint": "eslint src --ignore-path .gitignore"
   },
   "repository": {
     "type": "git",
@@ -25,10 +20,36 @@
   "homepage": "https://github.com/ekmartin/hackmit-crowdsearch#readme",
   "dependencies": {
     "bulma": "^0.1.2",
-    "enzyme": "^2.4.1",
-    "express": "^4.14.0",
-    "kyt": "^0.1.0",
     "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react-dom": "^15.3.0",
+    "react-hot-loader": "^3.0.0-beta.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.2.2",
+    "express": "^4.14.0",
+    "file": "^0.2.2",
+    "file-loader": "^0.9.0",
+    "object-assign": "^4.1.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.13.0",
+    "postcss-nested": "^1.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.7.0",
+    "webpack-hot-middleware": "^2.12.2"
   }
 }
