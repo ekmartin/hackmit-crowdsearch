@@ -1,2 +1,16 @@
 $family-primary: 'proxima-nova';
 @import '~bulma/bulma.sass';
+
+.container {
+  @include desktop {
+    max-width: 768px;
+  }
+
+  @include widescreen {
+    max-width: 960px;
+  }
+}
+
+.background-color {
+  background-color: white;
+}
