@@ -1,6 +1,17 @@
 {
   "rules": {
-    ".read": true,
-    ".write": "auth != null"
+    ".read": "auth != null",
+    ".write": false,
+    "people": {
+      ".read": true
+    },
+    "comments": {
+      "$person": {
+        "$author": {
+          ".write": "auth.token.name == $author"
+        },
+        ".write": "auth != null"
+      }
+    }
   }
 }
