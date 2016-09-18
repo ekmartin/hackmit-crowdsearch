@@ -82,6 +82,8 @@ $super-color: #ffca29;
 .title-header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .comment {
