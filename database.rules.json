@@ -1,16 +1,15 @@
 {
   "rules": {
     ".read": "auth != null",
-    ".write": false,
+    ".write": "auth != null && auth.isAdmin == true",
     "people": {
       ".read": true
     },
     "comments": {
       "$person": {
-        "$author": {
-          ".write": "auth.token.name == $author"
-        },
-        ".write": "auth != null"
+        "$comment": {
+          ".write": "!data.exists() && auth != null && auth.token.name == newData.child('author').val()"
+        }
       }
     }
   }
