@@ -19,6 +19,7 @@ export default class Updates extends Component {
         <ul className="columns">
           {this.state.updates.map(update =>
             <Update
+              {...this.props}
               key={update.key}
               update={update}
             />

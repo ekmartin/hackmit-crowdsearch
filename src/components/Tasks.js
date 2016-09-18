@@ -10,23 +10,26 @@ export default class Tasks extends Component {
     });
   }
 
-  createBox() {
+  render() {
     if (!this.state) return null; // TODO: Loader
     const { tasks } = this.state;
     return (
-      <div className="container">
+      <section className="small-section">
+        <h3 className="title is-3">What can you do to help?</h3>
         <div className="text-box">
-          <center>
-        What you could do to help:
-          </center>
+          <p className="content is-medium">
+            Thank you for helping us in our search.
+            We've compiled a list of tasks you can help with,
+            and added up what's been done so far.
+          </p>
           <table className="table">
             <thead>
               <tr>
                 <th>
-                Action
+                  Action
                 </th>
                 <th>
-                Status
+                  Status
                 </th>
               </tr>
             </thead>
@@ -37,19 +40,16 @@ export default class Tasks extends Component {
                     {task.description}
                   </td>
                   <td>
-                    {task.isDone ? 'Done' : 'In Progress'}
+                    {task.isDone
+                      ? 'Done'
+                      : 'In Progress'}
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-      </div>
+      </section>
     );
   }
-
-  render() {
-    return (this.createBox());
-  }
-
 }

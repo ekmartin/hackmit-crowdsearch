@@ -29,12 +29,7 @@ $super-color: #ffca29;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 1%;
-  padding: 15px;
   white-space: pre-wrap;
-
-  &.media {
-    height: 100%;
-  }
 }
 
 .text-box {
@@ -63,7 +58,18 @@ $super-color: #ffca29;
 
 .small-section {
   padding: 15px 0;
+  margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
+}
+
+.update {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  > .media {
+    padding: 15px;
+  }
 }
 
 .avatar {
@@ -76,6 +82,35 @@ $super-color: #ffca29;
 .title-header {
   display: flex;
   justify-content: space-between;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment-text {
+  font-size: 17px;
+}
+
+.comment-author {
+  margin-right: 5px;
+}
+
+.comments {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-top: 1px solid rgba(221, 221, 221, 0.26);
+}
+
+.comment-input {
+  @extend .input;
+  border-radius: 0;
+  border-color: #dddfe2;
+  box-shadow: none;
+}
+
+.comment-input:focus {
+  border-color: #1fc8db;
 }
 
 .is-super-color {
