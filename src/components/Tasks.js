@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Task from './Task';
 
 export default class Tasks extends Component {
   componentDidMount() {
@@ -7,6 +8,16 @@ export default class Tasks extends Component {
       state: 'tasks',
       context: this,
       asArray: true
+    });
+  }
+
+  toggleTask(task) {
+    const { base, params } = this.props;
+    base.update(`tasks/${params.personId}/${task.key}`, {
+      data: {
+        ...task,
+        isDone: !task.isDone
+      }
     });
   }
 
@@ -22,32 +33,14 @@ export default class Tasks extends Component {
             We've compiled a list of tasks you can help with,
             and added up what's been done so far.
           </p>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>
-                  Action
-                </th>
-                <th>
-                  Status
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {tasks.map(task => (
-                <tr key={task.key}>
-                  <td>
-                    {task.description}
-                  </td>
-                  <td>
-                    {task.isDone
-                      ? 'Done'
-                      : 'In Progress'}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+
+          <ul className="todo-list">
+            {tasks.map(task => <Task
+              key={task.key}
+              task={task}
+              toggle={() => this.toggleTask(task)}
+            />)}
+          </ul>
         </div>
       </section>
     );

@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import App from './components/App';
 import './main.scss';
+import './tasks.scss';
 
 const root = document.querySelector('#root');
 const base = Rebase.createClass({
