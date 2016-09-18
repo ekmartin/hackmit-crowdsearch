@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Task = ({ user, toggle, task }) => {
+const Task = ({ toggle, task }) => {
   const completed = task.isDone ? 'completed' : '';
   return (
     <li className="task">

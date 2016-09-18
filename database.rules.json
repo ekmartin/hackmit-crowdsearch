@@ -1,7 +1,7 @@
 {
   "rules": {
     ".read": "auth != null",
-    ".write": "auth != null && auth.isAdmin == true",
+    ".write": "root.child('admins/' + auth.uid).val() == true",
     "people": {
       ".read": true
     },
