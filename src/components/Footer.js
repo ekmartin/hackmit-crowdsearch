@@ -4,7 +4,7 @@ const Footer = () => (
   <footer className="footer is-primary">
     <div className="container">
       <div className="content has-text-centered">
-        @HackMIT
+        Created for HackMIT 2016
       </div>
     </div>
   </footer>
