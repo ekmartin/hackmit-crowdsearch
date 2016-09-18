@@ -26,6 +26,7 @@ export default class Information extends Component {
               to={`/${params.personId}/contribute`}
               className="button is-large is-super-color"
             >
+              <i className="fa fa-users" style={{ paddingRight: 10 }} />
               Help find {profile.name}
             </Link>
           </div>
