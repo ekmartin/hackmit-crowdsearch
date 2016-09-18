@@ -46,3 +46,15 @@ $super-color: #ffca29;
 .button {
   border-color: transparent;
 }
+
+i.fa {
+  margin: 0 10px;
+}
+
+.share-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-top: 20px;
+}

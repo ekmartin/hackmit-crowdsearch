@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Link from 'react-router/Link';
 import NotFound from './NotFound';
 import MissingCard from './MissingCard';
+import DetailedInformation from './DetailedInformation';
+import ShareBox from './ShareBox';
 
 export default class Information extends Component {
   componentDidMount() {
@@ -26,7 +28,7 @@ export default class Information extends Component {
               to={`/${params.personId}/contribute`}
               className="button is-large is-super-color"
             >
-              <i className="fa fa-users" style={{ paddingRight: 10 }} />
+              <i className="fa fa-users" />
               Help find {profile.name}
             </Link>
           </div>
@@ -38,8 +40,10 @@ export default class Information extends Component {
               <p className="content text-box">
                 {profile.message}
               </p>
+              <DetailedInformation profile={profile} />
             </div>
           </div>
+          <ShareBox profile={profile} />
         </div>
       </section>
     );
