@@ -11,6 +11,19 @@ $family-primary: 'proxima-nova';
   }
 }
 
-.background-color {
+.nav {
+  min-height: 70px;
+}
+
+.section {
+  background-color: transparent;
+}
+
+.text-box {
   background-color: white;
+  border: 1px solid transparent;
+  border-radius: 1%;
+  white-space: pre-wrap;
+  padding: 30px;
+  font-size: 22px;
 }
