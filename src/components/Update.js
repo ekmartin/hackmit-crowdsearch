@@ -11,14 +11,14 @@ const Update = ({ update, ...props }) => (
         <figure className="media-left">
           <p className="avatar image is-64x64">
             <img
-              src={`https://api.adorable.io/avatars/105/${update.name}`}
-              alt={update.name}
+              src={`https://api.adorable.io/avatars/105/${update.author}`}
+              alt={update.author}
             />
           </p>
         </figure>
         <div className="media-content">
           <div className="author">
-            <h4 className="title is-4">{update.name}</h4>
+            <h4 className="title is-4">{update.author}</h4>
             <p className="subtitle">{getDate(update.createdAt)}</p>
           </div>
           <p className="text-content">{update.content}</p>

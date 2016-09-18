@@ -7,9 +7,23 @@
     },
     "comments": {
       "$person": {
+        ".write": "root.child('moderators/' + $person + '/' + auth.uid).val() == true",
         "$comment": {
-          ".write": "!data.exists() && auth != null && auth.token.name == newData.child('author').val()"
+          ".write": "!data.exists() && auth != null && auth.token.name == newData.child('author').val()",
+          ".validate": "newData.hasChildren(['author', 'content'])"
         }
+      }
+    },
+    "updates": {
+      "$person": {
+        ".write": "root.child('moderators/' + $person + '/' + auth.uid).val() == true",
+        ".validate": "newData.hasChildren(['author', 'content', 'createdAt'])"
+      }
+    },
+    "tasks": {
+      "$person": {
+        ".write": "root.child('moderators/' + $person + '/' + auth.uid).val() == true",
+        ".validate": "newData.hasChildren(['description', 'isDone'])"
       }
     }
   }
