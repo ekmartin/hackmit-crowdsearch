@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'react-router/Link';
 import NotFound from './NotFound';
 import MissingCard from './MissingCard';
 
@@ -15,10 +16,19 @@ export default class Information extends Component {
     if (!this.state) return null; // TODO: Loader
     if (!this.state.profile) return <NotFound />;
     const { profile } = this.state;
+    const { params } = this.props;
     return (
       <section className="section">
         <div className="container">
-          <h2 className="title is-2">Missing Person</h2>
+          <div className="title-header">
+            <h2 className="title is-2">Missing Person</h2>
+            <Link
+              to={`/${params.personId}/contribute`}
+              className="button is-large is-super-color"
+            >
+              Help find {profile.name}
+            </Link>
+          </div>
           <div className="columns">
             <div className="column is-one-third">
               <MissingCard profile={profile} />

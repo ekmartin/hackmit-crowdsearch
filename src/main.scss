@@ -1,4 +1,6 @@
 $family-primary: 'proxima-nova';
+$super-color: #ffca29;
+
 @import '~bulma/bulma.sass';
 
 .container {
@@ -30,4 +32,17 @@ $family-primary: 'proxima-nova';
   white-space: pre-wrap;
   padding: 30px;
   font-size: 22px;
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.is-super-color {
+  background-color: $super-color;
+}
+
+.button {
+  border-color: transparent;
 }

@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Information from './Information';
+import Contribute from './Contribute';
 import NotFound from './NotFound';
 
 const App = ({ base }) => {
@@ -13,7 +14,8 @@ const App = ({ base }) => {
       <div>
         <Header />
         <Match exactly pattern="/" component={NotFound} />
-        <Match pattern="/:personId" component={wrapped(Information)} />
+        <Match exactly pattern="/:personId" component={wrapped(Information)} />
+        <Match exactly pattern="/:personId/contribute" component={wrapped(Contribute)} />
         <Footer />
       </div>
     </Router>
