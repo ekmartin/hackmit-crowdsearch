@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-// TODO: Get this from above
-const user = {
-  name: 'Art Garfunkel'
-};
-
 export default class CommentInput extends Component {
   constructor(props) {
     super(props);
@@ -25,11 +20,11 @@ export default class CommentInput extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { base, update } = this.props;
+    const { base, update, user } = this.props;
     base.push(`comments/${update.key}`, {
       data: {
         content: this.state.comment,
-        author: user.name
+        author: user.displayName
       }
     });
 
@@ -37,13 +32,14 @@ export default class CommentInput extends Component {
   }
 
   render() {
+    const { user } = this.props;
     return (
       <div className="media">
         <div className="media-left">
           <p className="image is-32x32">
             <img
-              src={`https://api.adorable.io/avatars/64/${user.name}`}
-              alt={user.name}
+              src={`https://api.adorable.io/avatars/64/${user.displayName}`}
+              alt={user.displayName}
             />
           </p>
         </div>
