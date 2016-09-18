@@ -7,6 +7,7 @@ const Header = () => (
         <nav className="nav">
           <div className="nav-left">
             <a className="nav-item is-brand">
+              <img src="/images/logo.svg" alt="Crowd Search" />
               <h1 className="title">Crowd Search</h1>
             </a>
           </div>
