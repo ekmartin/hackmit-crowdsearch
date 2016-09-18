@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Information from './Information';
 import Contribute from './Contribute';
 import NotFound from './NotFound';
+import Tasks from './Tasks';
 
 const App = ({ base }) => {
   const wrapped = Component => props => <Component base={base} {...props} />;
@@ -16,6 +17,7 @@ const App = ({ base }) => {
         <Match exactly pattern="/" component={NotFound} />
         <Match exactly pattern="/:personId" component={wrapped(Information)} />
         <Match exactly pattern="/:personId/contribute" component={wrapped(Contribute)} />
+        <Match exactly pattern="/:personId/tasks" component={wrapped(Tasks)} />
         <Footer />
       </div>
     </Router>
