@@ -132,3 +132,31 @@ i.fa {
   font-size: 22px;
   margin-top: 20px;
 }
+
+.person-list {
+  padding: 15px;
+}
+
+.person-item {
+  padding: 20px;
+  border-bottom: 1px solid #ededed;
+
+}
+
+.person-item img {
+  max-width: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.person-item a {
+  display: flex;
+  align-items: center;
+  color: $grey-darker;
+  transition: .5s color;
+  font-size: 24px;
+
+  &:hover {
+    color: $black;
+  }
+}
