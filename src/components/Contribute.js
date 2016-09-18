@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Updates from './Updates';
 
 export default class Contribute extends Component {
   componentDidMount() {
@@ -15,7 +16,11 @@ export default class Contribute extends Component {
 
   render() {
     return (
-      <div>Contribute!</div>
+      <section className="section">
+        <div className="container">
+          <Updates {...this.props} />
+        </div>
+      </section>
     );
   }
 }

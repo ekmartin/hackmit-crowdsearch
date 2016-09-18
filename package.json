@@ -21,6 +21,7 @@
   "dependencies": {
     "bulma": "^0.1.2",
     "firebase": "^3.4.0",
+    "moment": "^2.15.0",
     "re-base": "^2.2.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",

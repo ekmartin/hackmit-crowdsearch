@@ -25,13 +25,49 @@ $super-color: #ffca29;
   background-color: transparent;
 }
 
-.text-box {
+.white-box {
   background-color: white;
   border: 1px solid transparent;
   border-radius: 1%;
+  padding: 15px;
   white-space: pre-wrap;
+  height: 100%;
+}
+
+.text-box {
+  @extend .white-box;
   padding: 30px;
   font-size: 22px;
+}
+
+.text-content {
+  font-size: 16px;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  > h4.title {
+    margin-bottom: 0;
+  }
+
+  > p.subtitle {
+    margin-top: 0;
+  }
+}
+
+.small-section {
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.avatar {
+  margin-right: 15px;
+  > img {
+    border-radius: 50%;
+  }
 }
 
 .title-header {
