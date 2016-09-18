@@ -4,6 +4,7 @@ import NotFound from './NotFound';
 import MissingCard from './MissingCard';
 import DetailedInformation from './DetailedInformation';
 import ShareBox from './ShareBox';
+import LocationMap from './LocationMap';
 
 export default class Information extends Component {
   componentDidMount() {
@@ -41,17 +42,7 @@ export default class Information extends Component {
                 {profile.message}
               </p>
               <DetailedInformation profile={profile} />
-              <h1 className="title is-3 has-text-centered">
-                Last Seen Location
-              </h1>
-              <iframe
-                width="635"
-                height="450"
-                frameBorder="0"
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCASLqNTKj9ON4kksYcvGFRCPjUgEH0gEw
-                &q=${profile.locationLastSeen}`}
-                allowFullScreen
-              />
+              <LocationMap profile={profile} />
             </div>
           </div>
           <ShareBox profile={profile} />
