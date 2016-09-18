@@ -17,13 +17,17 @@
     "updates": {
       "$person": {
         ".write": "root.child('moderators/' + $person + '/' + auth.uid).val() == true",
-        ".validate": "newData.hasChildren(['author', 'content', 'createdAt'])"
+        "$update": {
+          ".validate": "newData.hasChildren(['author', 'content', 'createdAt'])"
+        }
       }
     },
     "tasks": {
       "$person": {
         ".write": "root.child('moderators/' + $person + '/' + auth.uid).val() == true",
-        ".validate": "newData.hasChildren(['description', 'isDone'])"
+        "$task": {
+          ".validate": "newData.hasChildren(['description', 'isDone'])"
+        }
       }
     }
   }
