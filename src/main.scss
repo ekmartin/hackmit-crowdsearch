@@ -31,7 +31,10 @@ $super-color: #ffca29;
   border-radius: 1%;
   padding: 15px;
   white-space: pre-wrap;
-  height: 100%;
+
+  &.media {
+    height: 100%;
+  }
 }
 
 .text-box {
